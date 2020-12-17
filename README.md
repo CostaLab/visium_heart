@@ -22,23 +22,14 @@ Our results provide novel links between cell composition and function that could
  ***
 
  ### Availabilty of data
- The datasets supporting the conclusions of this publication are available at Zenodo:
- 10.5281/zenodo.3797044
- [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3797044.svg)](https://zenodo.org/record/3797044#.XsQPMy2B2u5)
-
- From Zenodo you can download these (zipped) folders: 
-
-  * `data` - Contains the directory with processed data sets used for the analysis and to generate the figures
-
- Please deposit the unzipped folders in the root directory of this R-project.
 
   **Exceptions:**
- Raw data can't be directly provided at the moment, however submissions to proper data repositories are being prepared and will be updated as soon as possible
+ Raw data can't be directly provided at the moment. Processed data will be available in proper data repositories after publication.
 
  ***
 
  ### How to cite
- > Kuppe C, Ramirez Flores RO, Li Z, et al. “Spatially integrated single cell transcriptomic and epigenomic map of human myocardial infarction.” TBD. 2020. DOI: [TBA](link)
+ > Kuppe C, Ramirez Flores RO, Li Z, et al. “Multi-omic map of human myocardial infarction.” TBA. 2020. DOI: [TBA](link)
 
  ***
 
@@ -50,11 +41,11 @@ Our results provide novel links between cell composition and function that could
 We clustered each single dataset of snRNA and snATAC independently. First, we annotated the snRNA-Seq data and used label transfer via Seurat for annotation of the snATAC-Seq datasets. Single nuclear datasets were then integrated using Seurat. (Step 2) We detected transcription factor (TF) binding activities of specific cell-types with footprinting analysis on snATAC-seq data using HINT-ATAC. To uncover potential regulatory regions that control gene expression in different cell-types, we identified peak-to-gene links using the integrated snATAC-seq and snRNA-seq datasets. We use cell specific footprints and peak-to-gene links to derive TF and cell specific regulomes. (Step 3) For the spatial data we used SPARK to identify spatially variable genes and overrespresentation analysis (ORA) for a general slide characterization. Then, to functionally characterize each spot, we estimated the activities of transcription factors and signaling pathway activities using DoRothEA and PROGENy, respectively. (Step 4) Spatial patterns of expression were obtained using unsupervised clustering and differential expression analysis was used to manually annotate each area. We inferred the cell-type composition of each spot by transferring the cell-type annotations from their respective single nuclear datasets. (Step 5) TF binding activity scores from snATAC datasets were mapped to the spatial location by considering the cellular composition of the spots. (Step 6) Finally, we studied spatial interactions using MISTy to estimate the importance of putative extracellular matrix proteins and cytokines, and pathway activities in the expression of marker genes of specific cell types.
 
 
- #### sn-ATAC analysis
- Scripts available [here](https://github.com/saezlab/visium_heart/tree/master/scATAC_seq).
+ #### snATAC-seq analysis
+ Scripts available [here](https://github.com/saezlab/visium_heart/tree/master/snATAC_seq).
 
- #### sn-RNASeq analysis
- Scripts available [here](https://github.com/saezlab/visium_heart/tree/master/scATAC_seq).
+ #### snRNA-seq analysis
+ Scripts available [here](https://github.com/saezlab/visium_heart/tree/master/snRNA_seq).
 
  #### Spatial transcriptomics analysis
  Scripts available [here](https://github.com/saezlab/visium_heart/tree/master/visium).
